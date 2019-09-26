@@ -12,12 +12,19 @@
 
 ## 目录结构
 
+
  android 
+
     app
+
         src
+
             main
+
                 java
+
                     com
+
                         yunfeiapp (原生方法)
                 
                 res (原生的界面构建)
