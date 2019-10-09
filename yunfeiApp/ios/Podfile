@@ -28,11 +28,11 @@ target 'yunfeiApp' do
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
 
-  pod 'react-native-cameraroll', :path => '../node_modules/@react-native-community/cameraroll'
 
-  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
 
-  pod 'RNScreens', :path => '../node_modules/react-native-screens'
+
+
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 
   target 'yunfeiAppTests' do
     inherit! :search_paths

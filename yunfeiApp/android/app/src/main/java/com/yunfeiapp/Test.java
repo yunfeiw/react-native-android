@@ -1,20 +1,21 @@
+/**
+ * 2019/9/28
+ * 
+ * 描述：原生调用RN的方法；使用监听事件的方式返回给RN数据
+ * 
+ * 状态：启用
+ */
 
 package com.yunfeiapp;
 
 import android.provider.Settings;
-// import android.support.annotation.Nullable;
 
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.modules.core.DeviceEventManagerModule;
 
-/**
- * Created by Administrator on 2016/10/30.
- */
-
 public class Test {
-
     // 定义上下文对象
     public static ReactContext myContext;
 
@@ -25,24 +26,8 @@ public class Test {
     }
 
     public void fun(String val) {
-        // 在该方法中开启线程，并且延迟3秒，然后向JavaScript端发送事件。
-        // new Thread(new Runnable() {
-        // @Override
-        // public void run() {
-
-        // try {
-        // Thread.sleep(3000);
-        // } catch (InterruptedException e) {
-        // e.printStackTrace();
-        // }
-
         // 发送事件,事件名为EventName
         WritableMap et = Arguments.createMap();
         sendEvent(myContext, "laiduanxinle", et, val);
-
-        // }
-        // }).start();
-
     }
-
 }

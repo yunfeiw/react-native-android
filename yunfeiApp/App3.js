@@ -82,8 +82,6 @@ export default class PermissionAndroidView extends Component {
       alert(val);
     });
   }
-
-
   componentDidMount() {
     this.emitter = DeviceEventEmitter.addListener('eventName', this.evetntAlter)
   }
@@ -146,7 +144,6 @@ export default class PermissionAndroidView extends Component {
             );
           })}
         </ScrollView>
-
 
         <TouchableOpacity style={styles.button_view}
           onPress={this.requestReadPermission.bind(this)}>

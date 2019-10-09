@@ -1,6 +1,8 @@
-/* 
-    获取当前机型 package
-*/
+/**
+ * 2019/9/25
+ * 描述：暴漏获取手机机型方法
+ * 状态：启用
+ */
 package com.yunfeiapp;
 
 import com.facebook.react.ReactPackage;

@@ -1,12 +1,20 @@
+/**
+ * 2019/9/27
+ * 
+ * 描述：短信劫持；手机获取到短信后，对获取短信进行处理
+ * 并调用调用原生方法返回给RN数据
+ * 
+ * 状态：启用
+ */
 
 package com.yunfeiapp;
 
 import android.content.BroadcastReceiver;
+import android.telephony.SmsMessage;
+import android.telephony.SmsManager;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.telephony.SmsMessage;
-import android.telephony.SmsManager;
 import android.widget.Toast;
 import android.util.Log;
 
@@ -25,7 +33,7 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReactContext;
 
-import com.yunfeiapp.MyModule; // <-- 引入读取当前机型
+import com.yunfeiapp.MyModule; //
 
 public class MyReceiver extends BroadcastReceiver {
    @Override
@@ -47,10 +55,9 @@ public class MyReceiver extends BroadcastReceiver {
          map.put("mess", content);// 短信内容
          map.put("time", date_time);// 发送时间
       }
-
-      // 
-      MyModule.NativeMethod(JSONObject.toJSONString(map));
+      // 调用RN封装的方法NativeMethod
       // new MyModule().NativeMethod();
+      MyModule.NativeMethod(JSONObject.toJSONString(map));
       Toast.makeText(context, "Intent Detected.", Toast.LENGTH_LONG).show();
    }
 }

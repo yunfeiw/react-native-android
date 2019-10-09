@@ -32,21 +32,11 @@ public class SendBroadcastModule extends ReactContextBaseJavaModule {
     public void sendBroadcast() {
         // 发送广播
         Toast.makeText(getReactApplicationContext(), "测试...", Toast.LENGTH_SHORT).show();
-        // Intent intent = new Intent();
-        // intent.setAction("com.yunfeiapp.aaaa");
-        // getReactApplicationContext().sendBroadcast(intent);
-
         Intent intent = new Intent("com.yunfeiapp.MonitorPhone");
+        // 使用此方法解决高版本兼容问题
         intent.setComponent(new ComponentName("com.yunfeiapp", "com.yunfeiapp.MyBroadcastReceiver"));
         intent.putExtra("data", "hello");
         getReactApplicationContext().sendBroadcast(intent);
-
-        // receiver = new MyBroadcastReceiver();
-        // IntentFilter filter = new IntentFilter("com.yunfeiapp.aaaa");
-        // getActivity().registerReceiver(receiver, filter);
-        // Intent intent = new Intent("com.yunfeiapp.aaaa");
-        // getReactApplicationContext().sendBroadcast(intent);
-
     }
 
     @Override

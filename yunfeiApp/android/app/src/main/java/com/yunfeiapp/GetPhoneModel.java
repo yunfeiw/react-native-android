@@ -1,6 +1,8 @@
 
 /**
- * 获取手机型号
+ * 2019/9/25
+ * 描述：获取手机型号
+ * 状态：启用
  */
 package com.yunfeiapp;
 
@@ -29,6 +31,6 @@ public class GetPhoneModel extends ReactContextBaseJavaModule {
     private void getPhoneModel(Callback successCallback) {
         successCallback.invoke(Build.MODEL);
         // 系统版本
-        // android.os.Build.VERSION.RELEASE;  
+        // android.os.Build.VERSION.RELEASE;
     }
 }

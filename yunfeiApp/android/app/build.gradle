@@ -201,8 +201,6 @@ android {
 }
 
 dependencies {
-    implementation project(':react-native-screens')
-    implementation project(':react-native-gesture-handler')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.facebook.react:react-native:+"  // From node_modules
     implementation 'androidx.annotation:annotation:+'   //引入Nullable
@@ -212,7 +210,6 @@ dependencies {
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02'
     // compile fileTree(dir: 'libs', include: ['*.jar']) /*这种方式比较好 */
     compile files('libs/fastjson-1.2.28.jar')
-    
     if (enableHermes) {
       def hermesPath = "../../node_modules/hermesvm/android/";
       debugImplementation files(hermesPath + "hermes-debug.aar")
