@@ -64,3 +64,10 @@ AsyncStorage:
 //     }
 //   })
 // ));
+
+
+/* 
+
+RN内的input在android内会自带padding
+
+*/
