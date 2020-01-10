@@ -40,3 +40,7 @@
 - cd android 
 
 - gradlew assembleRelease (window 下可省略./)
+
+### 记录
+
+yunfeiApp-V-4 ：实现APP后台长时间运行（1像素方案）
